@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  font-family: "Roboto", sans-serif;
+  color: darkslategray;
+  font-size: 12px;
+}
+
+aside {
+  flex: 1;
+  background-image: url(arthur-hinton-O-RWye1b9JA-unsplash.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+main {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: rgb(226, 235, 232);
+}
+
+#form-section {
+  background-color: white;
+  box-shadow: 0 3px 6px lightgrey;
+}
+
+form {
+  margin: 2rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 500px;
+  gap: 24px 36px;
+}
+
+.form-control {
+  width: 12rem;
+  display: inline-flex;
+  flex-direction: column;
+}
+
+.wrapper {
+  width: 100%;
+  padding: 36px;
+}
+
+label {
+  margin: 6px 3px;
+  text-transform: uppercase;
+  font-size: 11px;
+  letter-spacing: 2px;
+}
+
+input {
+  appearance: none;
+  outline: none;
+  border: 1px solid darkgray;
+  border-radius: 3px;
+  padding: 4px 6px;
+}
+input:hover,
+input:focus {
+  border: 1px solid rgb(73, 167, 255);
+}
+
+input.touched:invalid {
+  border: 1px solid red;
+}
+
+label:has(+ input.touched:invalid) {
+  color: red;
+}
+
+button {
+  background-color: rgb(72, 112, 72);
+  color: white;
+  padding: 12px 36px;
+  border: 0;
+  border-radius: 6px;
+  margin-bottom: 36px;
+  font-size: 1rem;
+}
+
+#sign-in p {
+  font-size: 1rem;
+}
+
+a {
+  color: rgb(72, 112, 72);
+  text-decoration: none;
+}
+a:hover {
+  color: rgb(107, 163, 107);
+}
+
+@media screen and (max-width: 800px) {
+  aside {
+    display: hidden;
+  }
+}
